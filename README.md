@@ -1,6 +1,6 @@
 # ZDSV Parser
 
-A delimiter separated values (DSV) parser written in zig for zig programs. It is a simple parser that handles various sparators such as comma(,), hash(#), tab, etc.
+A simple, efficient delimiter-separated values (DSV) parser written in Zig. This parser is designed to handle data formats where values are separated by a specific delimiter (e.g., commas for CSV, tabs for TSV), making it versatile for various data processing tasks.
 
 ## Features
 - Works with different types of separator characters
@@ -62,6 +62,7 @@ const Product = struct{
 7 Soap 10.5 180
 8 Curd 144.4 100
 9 Rice 15.33 800
+10,Bread,19.4,199
 ```
 
 The 'get' function takes three parameters for filepath, separator character, header present or absent (true/false) and records counts to read
@@ -79,4 +80,5 @@ id,name,price,units
 8,Curd,144.4,100
 9,Rice,15.33,800
 10,Bread,19.4,199
+
 ```

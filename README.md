@@ -1,14 +1,14 @@
 # ZDSV Parser
 
-A delimiter separated values (DSV) parser written in zig for zig language. It is a simple parser that handles various sparators such as comma(,), hash(#), tabs, etc.
+A delimiter separated values (DSV) parser written in zig for zig programs. It is a simple parser that handles various sparators such as comma(,), hash(#), tab, etc.
 
 ## Features
-
+- Works with different types of separator characters
 - Generic
 - Fast
 - Memory Safe
 
-## Installation
+## How to run the example
 
 1. Clone the repository:
     ```sh

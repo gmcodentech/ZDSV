@@ -44,7 +44,7 @@ pub fn ZDSV(comptime T: type) type {
                     break;
                 }
             } else |err| switch (err) {
-                error.EndOfStream => {}, 
+                error.EndOfStream => {},
                 else => return err,
             }
 
@@ -78,7 +78,7 @@ pub fn ZDSV(comptime T: type) type {
         }
 
         fn getValue(comptime data_type: type, value: []const u8) !data_type {
-			const dsv = std.mem.trimRight(u8, value, "\r");
+            const dsv = std.mem.trimRight(u8, value, "\r");
             const typeInfo = @typeInfo(data_type);
             switch (typeInfo) {
                 .Int => return try std.fmt.parseInt(data_type, dsv, 10),

@@ -51,8 +51,11 @@ const Product = struct{
 	price:f32,
 	units:u32
 };
-```
 
+The 'get' function takes three parameters for filepath, separator character, header present or absent (true/false) and records counts to read
+
+```
+## CSV file data
 ```text
 id,name,price,units
 1,sugar,34.5,100

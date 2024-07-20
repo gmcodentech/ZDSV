@@ -3,10 +3,10 @@
 A simple, efficient delimiter-separated values (DSV) parser written in Zig. This parser is designed to handle data formats where values are separated by a specific delimiter (e.g., commas for CSV, tabs for TSV), making it versatile for various data processing tasks.
 
 ## Features
-- Works with different types of separator characters
-- Generic
-- Fast
-- Memory Safe
+- **Custom Delimiter Support**: Easily parse files with any delimiter.
+- **Memory Efficient**: Designed with Zig's performance and safety features.
+- **Simple API**: Easy to integrate and use in your Zig projects.
+- **Error Handling**: Robust error handling for malformed data.
 
 ## How to run the example
 

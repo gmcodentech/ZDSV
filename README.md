@@ -35,10 +35,10 @@ pub fn main() !void {
     	defer _ = gpa.deinit();
     	const allocator = gpa.allocator();
 	
-	const ltoc = try zdsv(Product).init(allocator);
-    	defer ltoc.deinit();
+	const parser = try zdsv(Product).init(allocator);
+    	defer parser.deinit();
 
-    	const productList = try ltoc.get("products.csv", ",", true, 10);
+    	const productList = try parser.get("products.csv", ",", true, 10);
 	for(productList.items) |item|{
 		std.debug.print("{d} {s} {d} {d}\n",.{item.id,item.name,item.price,item.units});
 	}

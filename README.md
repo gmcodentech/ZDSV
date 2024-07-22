@@ -65,20 +65,5 @@ const Product = struct{
 10,Bread,19.4,199
 ```
 
-The 'get' function takes three parameters for filepath, separator character, header present or absent (true/false) and records counts to read
+The 'get' function takes four parameters for filepath, separator character, header present or absent (true/false) and records counts (0 to read the entire file) to read
 
-## CSV file data (products.csv)
-```text
-id,name,price,units
-1,sugar,34.5,100
-2,tea,35.6,1900
-3,Milk,56.3,200
-4,Water,95.4,100
-5,Toothpaste,23.3,90
-6,Candy,2.3,1000
-7,Soap,10.5,180
-8,Curd,144.4,100
-9,Rice,15.33,800
-10,Bread,19.4,199
-
-```

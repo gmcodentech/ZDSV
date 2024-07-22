@@ -40,7 +40,7 @@ pub fn ZDSV(comptime T: type) type {
 
                 try objects.append(obj);
 
-                if (counter == n) {
+                if (n != 0 and counter == n) {
                     break;
                 }
             } else |err| switch (err) {
@@ -87,4 +87,13 @@ pub fn ZDSV(comptime T: type) type {
             }
         }
     };
+}
+
+//tests
+test "check_objects_len"{
+	const Product = struct{id:i32,name:[]const u8,price:f32, units:u32};
+	const parser = try ZDSV(Product).init(std.testing.allocator);
+	defer parser.deinit();
+	const product_list = try parser.get("..\\products.csv",",",true,5);
+	try std.testing.expect(product_list.items.len == 5);
 }
